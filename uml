@@ -1,0 +1,30 @@
+@startuml
+start
+
+if (Check Condition) then (yes)
+  :Success Step 1;
+  :Success Step 2;
+  :Success Step 3;
+else (no)
+  -[#red]-> Failure Path;
+endif
+
+if (Check Condition 2) then (yes)
+  :Success Step 4;
+  :Success Step 5;
+else (no)
+  -[#red]-> Failure Path;
+endif
+
+if (Check Condition 3) then (yes)
+  :Success Step 6;
+else (no)
+  -[#red]-> Failure Path;
+endif
+
+:End Success;
+-[#red]-> Failure Path;
+
+:Failure Handling;
+:End Fail;
+@enduml
